@@ -1,0 +1,90 @@
+{
+  "test_register": [
+    {
+      "desc": "输入必填项，注册成功",
+      "phone":"12346360822",
+      "pwd":"test123",
+      "imgVerifyCode":"8888",
+      "phoneCode":"666666",
+      "dyServer":"on",
+      "invite_phone": "",
+      "status_code": 200,
+      "status": 200,
+      "description": "注册成功"
+    },
+    {
+      "desc": "输入所有项，注册成功",
+      "phone":"12046367832",
+      "pwd":"test123",
+      "imgVerifyCode":"8888",
+      "phoneCode":"666666",
+      "dyServer":"on",
+      "invite_phone": "13012345678",
+      "status_code": 200,
+      "status": 200,
+      "description": "注册成功"
+    },
+    {
+      "desc": "手机号已存在，注册失败",
+      "phone":"12346360822",
+      "pwd":"test123",
+      "imgVerifyCode":"8888",
+      "phoneCode":"666666",
+      "dyServer":"on",
+      "invite_phone": "",
+      "status_code": 200,
+      "status": 100,
+      "description": "手机已存在!"
+    },
+    {
+      "desc": "密码为空，注册失败",
+      "phone":"02346367322",
+      "pwd":"",
+      "imgVerifyCode":"8888",
+      "phoneCode":"666666",
+      "dyServer":"on",
+      "invite_phone": "",
+      "status_code": 200,
+      "status": 100,
+      "description": "密码不能为空"
+    },
+    {
+      "desc": "图片验证码错误，注册失败",
+      "phone":"12346337327",
+      "pwd":"test123",
+      "imgVerifyCode":"4888",
+      "phoneCode":"666666",
+      "dyServer":"on",
+      "invite_phone": "",
+      "status_code": 200,
+      "status": 100,
+      "description": "验证码错误!"
+    },
+    {
+      "desc": "短信验证码错误，注册失败",
+      "phone":"12246337322",
+      "pwd":"test123",
+      "imgVerifyCode":"8888",
+      "phoneCode":"662666",
+      "dyServer":"on",
+      "invite_phone": "",
+      "status_code": 200,
+      "status": 100,
+      "description": "验证码错误"
+    },
+        {
+      "desc": "不同意注册协议，注册失败",
+      "phone":"82246337362",
+      "pwd":"test123",
+      "imgVerifyCode":"8888",
+      "phoneCode":"666666",
+      "dyServer":"off",
+      "invite_phone": "",
+      "status_code": 200,
+      "status": 100,
+      "description": "请同意我们的条款"
+    }
+
+
+  ]
+}
