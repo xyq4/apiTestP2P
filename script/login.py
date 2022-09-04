@@ -306,13 +306,14 @@ class login(unittest.TestCase):
         #准备参数
         #调用接口类中的发送登录的接口
         response = self.login_api.login(self.session,self.phone1,self.pwd)
+        logging.info("login response = {}".format(response.json()))
         #对结果进行断言
         assert_utils(self,response,200,200,"登录成功")
 
     #登录失败——用户名不存在
     def test18_login_phone_not_exist(self):
         #准备参数
-        Wphone = '13000000000'
+        Wphone = '1305765456'
         #调用接口类中的发送登录的接口
         response = self.login_api.login(self.session,Wphone,self.pwd)
         logging.info("login response = {}".format(response.json()))

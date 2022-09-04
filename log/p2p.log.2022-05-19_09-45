@@ -1,2 +1,0 @@
-2022-05-19 09:45:09,567 INFO [root] [login.py(test15_register_sms_code_is_wrong:272)] - get sms code response = {'status': 200, 'description': '短信发送成功'}
-2022-05-19 09:45:09,595 INFO [root] [login.py(test15_register_sms_code_is_wrong:278)] - register response = {'status': 100, 'description': '手机已存在!'}

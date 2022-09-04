@@ -5,6 +5,7 @@ import pymysql
 import requests
 from bs4 import BeautifulSoup
 
+from EncryptUtil import EncryptUtil
 import app
 
 
@@ -92,3 +93,15 @@ def read_param_data(filename,method_name,param_names):
                 test_case_data.append(test_params)
     print("test_case_data = {}".format(test_case_data))
     return test_case_data
+
+def encryted_Request(url,req_data):
+    diyou = EncryptUtil.get_diyou(req_data)
+    xmdy = EncryptUtil.get_xmdy(diyou)
+
+    req_param = {"diyou": diyou, "xmdy": xmdy}
+    response = requests.post(url, data=req_param)
+
+    diyou_data = response.json().get("diyou")
+    data = EncryptUtil.decrypt_data(diyou_data)
+    result = json.loads(data)
+    return result

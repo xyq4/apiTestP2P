@@ -13,7 +13,7 @@ class loginAPI():
         url = self.getImgCode_url + r
         response = session.get(url)
         return response
-
+    #短信验证码
     def getSmsCode(self,session,phone,imgVerifyCode):
         #准备参数
         data = {'phone': phone,'imgVerifyCode': imgVerifyCode ,'type':'reg'}
