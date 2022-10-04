@@ -5,13 +5,14 @@ import requests
 import app
 from EncryptUtil import EncryptUtil
 
+
 class mobileAPI():
     def __init__(self):
         self.login_url = app.MOBILE_URL + "/phone/member/login"
         self.get_user_info = app.MOBILE_URL + "/phone/member/userInfo"
+
     def login(self,member_name,pwd):
         req_data = {"member_name":member_name,"pwd":pwd}
-
         diyou = EncryptUtil.get_diyou(req_data)
         xmdy = EncryptUtil.get_xmdy(diyou)
 

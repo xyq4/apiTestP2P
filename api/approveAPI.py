@@ -1,6 +1,7 @@
 import app
 
 class approveAPI():
+
     def __init__(self):
         self.approve_url = app.BASE_URL + '/member/realname/approverealname'
         self.getapprove_url = app.BASE_URL + '/member/member/getapprove'

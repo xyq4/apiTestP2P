@@ -1,5 +1,6 @@
 import app
 
+
 class tenderAPI():
     def __init__(self):
         self.get_loaninfo_url = app.BASE_URL + "/common/loan/loaninfo"

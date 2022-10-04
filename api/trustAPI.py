@@ -11,7 +11,7 @@ class trustAPI():
         response = session.post(self.trust_register_url)
         return response
 
-    def get_recharge_verify_code(self,session,r):
+    def get_recharge_verify_code(self,session, r):
         url = self.get_recharge_verify_code_url + r
         response = session.get(url)
         return response
